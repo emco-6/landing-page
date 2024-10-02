@@ -1,6 +1,7 @@
 :root {
     --main-bg-color: hsl(180deg 5% 7%);
-    --secondary-bg-color: rgb(250, 241, 233);
+    --secondary-bg-color: #808080;
+    --light-bg-color: rgb(250, 241, 233);
     --accent-purple: rgb(211, 144, 255);
   }
   
@@ -29,7 +30,7 @@ body {
 }
 
 .header {
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 0 48px 0 48px ;
     border-bottom: 1px solid var(--accent-purple);
@@ -38,6 +39,10 @@ body {
 .footer {
     justify-content: center;
     align-items: center;
+    background-color: var(--main-bg-color);
+    border-top: 1px solid var(--accent-purple);
+    color: var(--accent-purple);
+    font-size: 14px;
 }
 
 .logo {
@@ -81,9 +86,11 @@ ul a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    padding: 24px 0px;
+    color: var(--light-bg-color);
+    padding: 24px 48px;
     /* flex: 1; */
+    padding: 0 48px 0 48px ;
+
 }
 
 .highlight-sec .wrapper {
@@ -108,7 +115,7 @@ ul a {
     width: auto;
 }
 
-.highlight-sec button {
+button {
     height: 36px;
     width: 120px;
     border-radius: 18px;
@@ -126,19 +133,22 @@ ul a {
 /* CARDS SECTION */
 /*  */
 .card-sec {
-    padding: 48px 0px;
+    padding: 48px 48px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 32px;
-    background-color: var(--secondary-bg-color);
+    background-color: var(--main-bg-color);
+    color: var(--light-bg-color);
 }
 
 
 .cards {
     display: flex;
     flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
 }
 
 .card {
@@ -146,16 +156,18 @@ ul a {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 300px;
+    width: 250px;
+    font-size: 16px;
+    text-align: center;
 
 }
 
 .card-image {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 0 16px rgb(122, 117, 114);
+    box-shadow: 0 0 24px rgb(17, 18, 19);
 }
 
 .card-image img {
@@ -180,6 +192,8 @@ ul a {
 .quote-sec {
     display: flex;
     justify-content: center;
+    background-color: var(--accent-purple);
+    color: var(--main-bg-color);
 }
 
 .quote-sec .wrapper {
@@ -187,11 +201,13 @@ ul a {
     flex-direction: column;
     align-items: flex-end;
     max-width: 800px;
+    padding: 48px 0;
 }
 
 .quote-sec p {
     font-size: 48px;
-    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-style: oblique; */
     text-transform: uppercase;
     text-align: right;
 }
@@ -200,3 +216,57 @@ ul a {
     font-weight: 700;
     font-size: 24px;
 }
+
+
+/*  */
+/* SIGN UP SECTION */
+/*  */
+.action-call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    height: 300px;
+}
+
+.action-call .wrapper {
+    background-color: var(--light-bg-color);
+    min-height: 100px;
+    max-height: 200px;
+    border-radius: 24px;
+    display: flex;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 800px;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+}
+
+.action-call .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.action-call .title {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.action-call p {
+    margin: 0;
+}
+
+
+.action-call button {
+    background-color: var(--main-bg-color);
+    color: var(--light-bg-color);
+    border: none;
+}
+
+
