@@ -1,6 +1,6 @@
 :root {
     --main-bg-color: hsl(180deg 5% 7%);
-    --secondary-bg-color: #808080;
+    --secondary-bg-color: rgb(70, 154, 187);
     --light-bg-color: rgb(250, 241, 233);
     --accent-purple: rgb(211, 144, 255);
   }
@@ -12,7 +12,7 @@ body {
     font-size: 18px;
     color: var(--main-bg-color);
     margin: 0;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,23 +24,36 @@ body {
 .header,
 .footer {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 75px;
     background: var(--main-bg-color);
     color: white;
+    width: 100%;
 }
 
 .header {
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0 48px 0 48px ;
     border-bottom: 1px solid var(--accent-purple);
+}
+
+.footer {
+    border-top: 1px solid var(--accent-purple);
+}
+
+.header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 1;
 }
 
 .footer {
     justify-content: center;
     align-items: center;
     background-color: var(--main-bg-color);
-    border-top: 1px solid var(--accent-purple);
     color: var(--accent-purple);
     font-size: 14px;
 }
@@ -87,9 +100,7 @@ ul a {
     justify-content: center;
     align-items: center;
     color: var(--light-bg-color);
-    padding: 24px 48px;
-    /* flex: 1; */
-    padding: 0 48px 0 48px ;
+    padding: 48px 0;
 
 }
 
@@ -97,8 +108,11 @@ ul a {
     display: flex;
     gap: 48px;
     justify-content: center;
-    flex: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 1;
     height: 300px;
+    width: 80%;
 }
 
 .signup-sec {
@@ -133,16 +147,27 @@ button {
 /* CARDS SECTION */
 /*  */
 .card-sec {
-    padding: 48px 48px;
+    padding: 48px 0px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 32px;
+    background-color: var(--main-bg-color);
+    color: var(--light-bg-color);
+    padding: 48px 0;
+}
+
+.card-sec .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 1;
     gap: 32px;
-    background-color: var(--main-bg-color);
-    color: var(--light-bg-color);
+    width: 80%;
 }
-
 
 .cards {
     display: flex;
@@ -193,6 +218,7 @@ button {
     display: flex;
     justify-content: center;
     background-color: var(--accent-purple);
+    padding: 48px 0;
     color: var(--main-bg-color);
 }
 
@@ -200,8 +226,8 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    max-width: 800px;
-    padding: 48px 0;
+    width: 40%;
+    gap: 8px;
 }
 
 .quote-sec p {
@@ -209,12 +235,16 @@ button {
     font-family: 'Times New Roman', Times, serif;
     /* font-style: oblique; */
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
+    padding: 0;
+    margin: 0;
 }
 
 .quote-sec .source {
     font-weight: 700;
     font-size: 24px;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -230,18 +260,19 @@ button {
 }
 
 .action-call .wrapper {
-    background-color: var(--light-bg-color);
+    background-color: var(--accent-purple);
     min-height: 100px;
     max-height: 200px;
     border-radius: 24px;
     display: flex;
     flex-shrink: 1;
     flex-grow: 0;
-    flex-basis: 800px;
+    flex-basis: 1;
     padding: 16px;
     align-items: center;
     justify-content: center;
     gap: 36px;
+    width: 60%;
 }
 
 .action-call .left {
@@ -265,7 +296,7 @@ button {
 
 .action-call button {
     background-color: var(--main-bg-color);
-    color: var(--light-bg-color);
+    color: var(--accent-purple);
     border: none;
 }
 
