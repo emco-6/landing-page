@@ -1,7 +1,7 @@
 :root {
     --main-bg-color: hsl(180deg 5% 7%);
     --secondary-bg-color: rgb(70, 154, 187);
-    --light-bg-color: rgb(250, 241, 233);
+    --light-bg-color: rgb(243, 236, 231);
     --accent-purple: rgb(211, 144, 255);
   }
   
@@ -44,7 +44,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 70%;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 1;
@@ -106,18 +106,18 @@ ul a {
 
 .highlight-sec .wrapper {
     display: flex;
-    gap: 48px;
     justify-content: center;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: 1;
     height: 300px;
-    width: 80%;
+    width: 70%;
+    gap: 16px;
 }
 
 .signup-sec {
-    min-width: 300px;
-    max-width: 500px;
+    min-width: 400px;
+    max-width: 550px;
 }
 
 .highlight-sec .title {
@@ -172,7 +172,7 @@ button {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 64px;
     justify-content: center;
 }
 
